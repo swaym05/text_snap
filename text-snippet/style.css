@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Montserrat&family=Young+Serif&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Montserrat&family=Roboto&family=Young+Serif&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Fraunces", serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Young Serif", serif;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar */
+.nav {
+  height: 120px;
+  width: 768px;
+  border: solid 1px whitesmoke;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 50px;
+  margin: auto;
+}
+
+.text-white li:first-child {
+  opacity: 0.6;
+  font-size: 16px;
+  padding-bottom: 1px;
+}
+.nav div:first-child li:first-child::before {
+  content: "Background Color";
+}
+#colorSelector {
+  cursor: pointer;
+  color: black;
+  background: linear-gradient(140deg, #1cb5e0, #0e0ea9);
+}
+.form-select:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.form-select-sm {
+  border-radius: var(--bs-border-radius-sm);
+}
+.form-select {
+  border: none;
+}
+/* Content Box */
+.box {
+  padding: 80px 0;
+  margin: 100px 0;
+  background: none;
+}
+#outerBox {
+  max-width: 1024px;
+  width: 680px;
+  padding: 60px;
+  background-image: linear-gradient(140deg, #1cb5e0, #0e0ea9);
+  border-radius: 10px;
+  overflow: auto;
+}
+
+#title {
+  border-radius: 8px 8px 0 0;
+  height: 35px;
+  background: black;
+  color: gray;
+  padding: 20px 0;
+  font-size: 16px;
+  width: 100%;
+}
+
+#myTextarea {
+  padding: 10px 10px 15px 10px;
+  border-radius: 0px 0px 8px 8px;
+  font-size: 16px;
+  width: 100%;
+  font-weight: 700;
+  resize: none;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+/* *place holder color */
+::placeholder {
+  color: rgb(63, 63, 63);
+} 
+
+
+@media screen and (max-width: 768px) and (min-width: 679px) {
+  .nav {
+    font-size: 45%;
+    width: 90%;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  i.bx {
+    font-size: 18px;
+  }
+  .nav div {
+    width: 30%;
+  }
+  #outerBox {
+    max-width: 580px;
+  }
+  .ws {
+    display: none;
+  }
+}
